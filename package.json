@@ -2,8 +2,7 @@
   "name": "snake-words",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
-  "homepage": ".",
+  "homepage": "https://lustr2.github.io/snake-words",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
