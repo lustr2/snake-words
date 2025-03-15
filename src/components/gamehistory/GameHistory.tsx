@@ -62,7 +62,7 @@ const GameHistory: React.FC<GameHistoryProps> = ({ user, continueWord }) => {
           );
           if (response.status === 200) {
               const responseOpt = await response.json();
-              const newHistoryData: HistoryUserPerGame[] = responseOpt.map(r => ({ 
+              const newHistoryData: HistoryUserPerGame[] = responseOpt.map((r: { id: number; idWord: number; word: string; attempt: string[]; done: boolean; }) => ({ 
                   id: r.id,
                   idWord: r.idWord, 
                   word: r.word,

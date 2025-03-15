@@ -46,7 +46,7 @@ const GlobalStats: React.FC<GlobalStatsProps> = ({ optLen }) => {
                 const dataResWords = await responseCountWords.json();
                 const newCount: number[] = [];
 //                dataResWords.map((d, index: number) => (Number(d.wordLength) === Number(optLen[index])) ?  newCount[index] = d.count : -1) ;
-                    dataResWords.forEach(d => {
+                    dataResWords.forEach((d: { wordLength: number; count: number; }) => {
                     const index: number = optLen.indexOf(d.wordLength);
                     if (index !== -1) {
                         newCount[index] = d.count;

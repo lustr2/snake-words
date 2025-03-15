@@ -77,14 +77,14 @@ const GameSettings: React.FC<GameSettingsI>  = ({ handleSubmit, cancelSettings }
         }));
     };
 
-    const onChangeOptionsAutoCorrect = (e: React.ChangeEvent<HTMLInputElement>) => {
+/*    const onChangeOptionsAutoCorrect = (e: React.ChangeEvent<HTMLInputElement>) => {
       //        console.log('Vybrano: ' + (e.target.value==='true'));
               setSettings(oldSett => ({
                   ...oldSett, 
                   autoCorrect: e.target.value === 'true'
               }));
     };
-
+*/
     const onSubmitSettingsOnDb = async( ud: UserSettings ) => {
 //      setShowSettings(false);
       try {

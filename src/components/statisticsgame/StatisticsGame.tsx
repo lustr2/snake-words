@@ -1,5 +1,5 @@
-import { useEffect, useState, useContext } from "react";
-import { UserSettings, UserContext } from "../context/SettingsContext";
+import { useEffect, useState } from "react";
+//import { UserSettings, UserContext } from "../context/SettingsContext";
 import { ViewOptionDb } from "../../utils/OptionsLengthValue";
 import Tabs from "../tabs/Tabs";
 import GlobalStats from "./globalstats/GlobalStats";
@@ -16,7 +16,7 @@ const StatisticsGame: React.FC<StatisticsGameProps> = () => {
     const [optionValue, setOptionValue] = useState<number[]>([]);
     const [isLoaded, setIsLoaded] = useState <boolean> (false);
 
-    const user: UserSettings = useContext(UserContext);
+   // const user: UserSettings = useContext(UserContext);
 
     const handleTabChange = (newActiveTab:number) => {
 		setActiveTab(newActiveTab);

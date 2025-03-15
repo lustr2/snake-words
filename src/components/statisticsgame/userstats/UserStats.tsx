@@ -26,7 +26,7 @@ const UserStats: React.FC<UserStatsProps> = ({ optLen }) => {
                 const dataResponse = await response.json();
                 console.log(dataResponse);
                 let c1 = 0;
-                dataResponse.map(d => (d.done === true)&& c1++);
+                dataResponse.map((d: { done: boolean; }) => (d.done === true)&& c1++);
                 setTotalGameUser(dataResponse.length);
                 setTotalDoneGame(c1);
 
@@ -41,7 +41,7 @@ const UserStats: React.FC<UserStatsProps> = ({ optLen }) => {
                 console.log(dataResWords);
                 const newCountT: number[] =  Array(optLen.length).fill(0);
                 const newCountF: number[] =  Array(optLen.length).fill(0);
-                dataResWords.forEach(d => {
+                dataResWords.forEach((d: { word: string[]; done: boolean; }) => {
                     const index: number = optLen.indexOf(d.word.length);
                     if (index !== -1) {
                         (d.done === true) ? newCountT[index]++ : newCountF[index]++;

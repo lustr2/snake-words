@@ -205,7 +205,7 @@ function App() {
               return {
                 ...oldZDB,
                 userPlayed: oldZDB.userPlayed?.map((played, i) => {
-                  const foundWord = wordsRes.find(w => w.idWord === oldZDB.idSlov[i]);
+                  const foundWord = wordsRes.find((w: { idWord: number; }) => w.idWord === oldZDB.idSlov[i]);
                   return foundWord ? foundWord.done : played;
                 })
               };
@@ -240,8 +240,8 @@ function App() {
             const wordsRes = await response.json();
             //! vytvarime novy obsah poli (nedelame spread)
             setSlovaZDB({
-              slova: [...wordsRes.map(w => w.word.toUpperCase())],
-              idSlov: [...wordsRes.map(w => w.idWord)],
+              slova: [...wordsRes.map((w: { word: string; }) => w.word.toUpperCase())],
+              idSlov: [...wordsRes.map((w: { idWord: number; }) => w.idWord)],
               userPlayed: [...Array(wordsRes.length).fill(false)]
             });
             setChangeLength(true);
@@ -589,7 +589,7 @@ function App() {
   };
 
   const handleClickContinue = async (aW: number, length: number, shots : string[]) => {
-    console.log('Continue: ' + aW + ', a delky: ' + length);
+//    console.log('Continue: ' + aW + ', a delky: ' + length);
     setStatisticsGame(false);
     if (letterCount !== length) {
       // delka se neshoduje s nastavenim, musime nahrat slova z DB

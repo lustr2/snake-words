@@ -8,10 +8,12 @@ interface WordStatsData {
     done: boolean
 }
 
+/*
 interface AllWordsData {
     idWord: number,
     statsWord: WordStatsData[]
 }
+*/
 
 interface LengthData {
     idWord: number,
@@ -26,8 +28,8 @@ interface WordStatsProps {
 const WordStats: React.FC<WordStatsProps> = ({ lengthWord, back }) => {
     const [oneWordStats, setOneWordStats] = useState <WordStatsData[]>([]);
     const [pointerList, setPointerList] = useState<number>(0);
-    const [countList, setCountList] = useState<number>(10);
-    const [allWordsStats, setAllWordsStats] = useState<AllWordsData[]>([]);
+    const countList: number = 10;
+  //  const [allWordsStats, setAllWordsStats] = useState<AllWordsData[]>([]);
     const [activeWordStats, setActiveWordStats] = useState<number>(0);
     const [lengthStats, setLengthStats] = useState<LengthData[]>([]);
 
@@ -43,7 +45,7 @@ const WordStats: React.FC<WordStatsProps> = ({ lengthWord, back }) => {
                 const dataRes = await response.json();
                 console.log(dataRes);
                 if (response.status === 200) {
-                    setOneWordStats( dataRes.map(d => ({
+                    setOneWordStats( dataRes.map((d: { id_user: number; user_name: string; attempt: string[]; countattempt: number; done: boolean; }) => ({
                                         idUser: d.id_user,
                                         userName: d.user_name,
                                         attempt: d.attempt, 
@@ -74,7 +76,7 @@ const WordStats: React.FC<WordStatsProps> = ({ lengthWord, back }) => {
                 const dataLengthRes = await responseDataLength.json();
                 if (responseDataLength.status === 200) {
                     console.log(dataLengthRes);
-                    setLengthStats(dataLengthRes.map(d => ({
+                    setLengthStats(dataLengthRes.map((d: { id_word: number; count_users: number; }) => ({
                                         idWord: d.id_word,
                                         countUsers: d.count_users}))
                     );
