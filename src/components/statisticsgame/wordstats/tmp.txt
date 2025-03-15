@@ -1,0 +1,73 @@
+
+1. setridena slova sestupne podle toho, kolikrat jej nekdo hral
+(a pak podle delky slova sestupne), ale jen dokoncene
+
+SELECT w.id_word, count(d.id_word) as count_users
+FROM data_history d, words w
+WHERE d.id_word = w.id_word
+  AND d.done = 'true'
+GROUP BY w.id_word, d.done
+ORDER BY count_users DESC, w.id_word;
+
+nebo takto a dava to stejne vysledky:
+
+SELECT d.id_word, count(d.id_word) as count_users
+FROM data_history d
+WHERE d.done = 'true'
+GROUP BY d.id_word, d.done
+ORDER BY count_users DESC, d.id_word;
+
+----------
+nebo jeste vice udaju, ale JEN dokoncene:
+
+SELECT d.id_word, count(d.id_word) as count_users, w.word_length
+FROM data_history d, words w
+WHERE d.id_word = w.id_word 
+    and d.done = 'true'
+GROUP BY d.id_word, d.done, w.word_length
+ORDER BY count_users DESC, w.word_length DESC;
+
+anebo vsechny zaznamy at dokoncene nebo nedokoncene:
+
+SELECT d.id_word, count(d.id_word) as count_users, w.word_length
+FROM data_history d, words w
+WHERE d.id_word = w.id_word 
+GROUP BY d.id_word, w.word_length
+ORDER BY count_users DESC, w.word_length DESC;
+
+pouzito: 
+String sql =
+                "SELECT d.id_word, count(d.id_word) as count_users " +
+                "FROM data_history d, words w " +
+                "WHERE d.id_word = w.id_word " +
+                "   and w.word_length = ? " +
+                "GROUP BY d.id_word " +
+                "ORDER BY count_users DESC ";
+                
+=============
+
+2. vyber vsech uzivatelu, kteri hrali dane slovo a setrideno podle poctu pokusu, na ktere jej uhadli(hotovo - WordStats.tsx)
+
+SELECT u.id, u.user_name, d.attempt, array_length(d.attempt, 1) as count_att, d.done 
+FROM data_history d, users u
+WHERE d.id_user = u.id 
+  AND d.id_word = 89 
+GROUP BY d.id_word, u.user_name, d.attempt, d.done,  u.id 
+ORDER BY d.done DESC, count_att;
+
+
+(String sql = "SELECT u.id, u.user_name, d.attempt, array_length(d.attempt, 1) as count_att, d.done "
+           + "FROM data_history d, users u "
+           + "WHERE d.id_user = u.id "
+           + "AND d.id_word = ? "
+           + "GROUP BY d.id_word, u.user_name, d.attempt, d.done,  u.id "
+           + "ORDER BY d.done DESC, count_att";
+
+PreparedStatement pstmt = connection.prepareStatement(sql);
+pstmt.setInt(1, idWord);  // Nahrazení hodnoty "?" dynamickým parametrem
+ResultSet rs = pstmt.executeQuery();
+)
+==============
+
+
+                    setOneWordStats( dataRes.map(d => {idUser: d.id_user; userName: d.user_name; attempt: d.attempt, countAttempt; d.countattempt; done: d.done})]);

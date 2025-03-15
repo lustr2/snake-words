@@ -1,0 +1,121 @@
+.line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.line-number {
+    margin-right: 30px;
+    display: block; /* Každé číslo řádku bude na novém řádku */
+}
+
+.line-item {
+    margin-bottom: 10px; /* Prostor mezi jednotlivými řádky */
+}
+  
+
+.one-letter-container {
+    display: block; /* Každý obsah OneLetter bude na novém řádku */
+}
+
+.line-container {
+    display: flex;
+    flex-direction: column; /* Zajistí, že každý .line bude na novém řádku */
+}
+
+.letters {
+    display: flex;
+    flex-wrap: wrap; /* Umožní komponentům OneLetter, aby se zobrazily na jednom řádku */
+    gap: 5px; /* Volitelný prostor mezi komponenty OneLetter */
+}
+  
+ 
+.input-field, .input-field-misplace, .input-field-disabled, .input-field-free, .input-field-right {
+    width: 25px; /* Šířka pro jedno písmeno */
+    height: 25px; /* Výška pole */
+    margin-right: 15px;
+    text-align: center;
+    background-color: hsl(193, 43%, 92%); /* Světle modrá barva pozadí */
+    border: 1px solid #000; /* Černý rámeček */
+    font-size: 16px; /* Velikost textu uvnitř pole */
+    padding: 0; /* Žádné vnitřní odsazení */
+    box-sizing: border-box; /* Zahrnuje rámeček a výplň do celkové velikosti prvku */
+    border-radius: 3px;
+}
+
+.input-field:focus {
+    outline: none;
+    border: 1px solid #000; /* Zachování černého rámečku */
+}
+
+.input-field:last-child {
+    margin-right: 10px;
+}
+
+.input-field-free {
+    background-color: rgba(128, 128, 128, 0.2); /* Šedá barva s 20% krytím */
+    cursor: pointer;
+}
+            
+.input-field-disabled {
+    background-color: rgba(231, 231, 231, 0.5); /* Tmavší šedá barva pro disabled stav */
+    cursor: not-allowed; /* Změna kurzoru na symbol zákazu */
+    color: #a9a9a9; /* Světlejší barva textu pro disabled stav */
+    border: 1px solid #a9a9a9; /* Světlejší rámeček pro disabled stav */
+
+}
+
+.input-field-right {
+    background-color: rgb(190, 248, 157); 
+    border: 1px solid black; 
+}
+
+.input-field-misplace {
+    background-color: hsl(60, 87%, 85%); 
+    border: 1px solid black; 
+}
+
+button, .button-ok, .button-clear {
+  padding-inline: 0; /* 20px roztahlo klavesnici :-) */
+  margin: 7px;
+  height: 25px;
+  width: 35px;
+  border-radius: 3px;
+  color: white;
+}
+
+.button-ok {
+    background-color: #4CAF50;
+    border: 1px solid #4CAF50;
+}
+
+.button-ok:disabled {
+    opacity: 0.5;       /* Změní průhlednost, aby bylo zřejmé, že tlačítko je zakázané */
+}
+
+.button-clear {
+    background-color: hwb(56 2% 27%);
+    border: 1px solid hwb(56 2% 27%);
+}
+
+.autoCorrect {
+  font-size: 1.2em; /* velikost podle potřeby */
+  vertical-align: baseline; /* pro vycentrování */
+  padding: 0; /* bez výplně */
+  color: black; /* barva textu */
+}
+
+.circle-button {
+    width: 1.5em; /* nastaví šířku tlačítka */
+    height: 1.5em; /* nastaví výšku tlačítka */
+    border-radius: 50%; /* udělá z tlačítka kruh */
+    background-color: white; /* nastaví barvu pozadí */
+    color: black; /* nastaví barvu textu */
+    border: 1px; /* odstraní hranice */
+    text-align: center; /* vycentruje text */
+    font-size: 1em; /* nastaví velikost textu */
+    cursor: text; /* nastaví ukazatel jako ruku při najetí myší */
+  }
+

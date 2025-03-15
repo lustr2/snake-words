@@ -1,0 +1,52 @@
+
+.keyboard-row {
+    display: flex; /* Použití flexboxu k seřazení položek vedle sebe */
+    justify-content: center; /* Horizontální zarovnání na střed */
+    margin-bottom: 10px; /* Přidání mezery mezi řádky */
+}
+
+.button-pismeno, 
+.button-pismeno-disabled, 
+.button-pismeno-free, 
+.button-pismeno-misplace,
+.button-pismeno-right {
+    width: 25px; /* Nastavení šířky tlačítka */
+    height: 25px; /* Nastavení výšky tlačítka (stejné jako šířka pro čtvercový tvar) */
+    border: 1px solid black; /* Černý rámeček */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em; /* Velikost textu */
+    text-align: center;
+    border-radius: 3px; /* Mírně zakulacené rohy */
+    color: black; /* Barva textu */
+    margin: 0 5px;
+}
+
+.button-pismeno-free {
+    background-color: rgba(128, 128, 128, 0.2); /* Šedá barva s 20% krytím */
+    cursor: pointer;
+}
+            
+.button-pismeno-disabled {
+    background-color: rgba(231, 231, 231, 0.5); /* Tmavší šedá barva pro disabled stav */
+    cursor: not-allowed; /* Změna kurzoru na symbol zákazu */
+    color: #a9a9a9; /* Světlejší barva textu pro disabled stav */
+    border: 1px solid #a9a9a9; /* Světlejší rámeček pro disabled stav */
+
+}
+
+.button-pismeno-right {
+    background-color: rgb(190, 248, 157); 
+    border: 1px solid black; 
+}
+
+.button-pismeno-misplace {
+    background-color: hsl(60, 87%, 85%); ; 
+    border: 1px solid black; 
+}
+
+.legenda {
+    display: ruby;
+    align : left;
+}

@@ -1,0 +1,72 @@
+.text-title {
+
+}
+
+.text-table {
+
+}
+
+.statistics-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+  }
+  
+  .statistics-table th,
+  .statistics-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .statistics-table th {
+    font-weight: bold;
+    background-color: #f9f9f9;
+  }
+  
+  .statistics-table td {
+    border-left: none;
+  }
+
+
+.table-container {
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #ddd; /* Tenký rámeček */
+    border-radius: 4px;
+  }
+  
+.styled-table  {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em; 
+}
+  
+.styled-table th {
+    background-color: #a81919; /* Barva záhlaví */
+    text-align: left;
+}
+  
+.styled-table caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.styled-table td {
+    padding: 5px;
+    border-top: 1px solid #ddd; /* Tenký rámeček mezi řádky */
+}
+  
+.styled-table td:first-child {
+    font-weight: normal; /* Zvýrazní délku slova */
+}
+
+.styled-table .value-cell-r {
+    text-align: right; /* Zarovnání hodnot vpravo pro sloupec s hodnotami */
+}
+
+.styled-table .value-cell-l {
+    text-align: left; /* Zarovnání hodnot vpravo pro sloupec s hodnotami */
+}

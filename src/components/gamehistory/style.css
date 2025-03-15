@@ -1,0 +1,46 @@
+.game-button {
+    background-color: rgb(173, 106, 23);
+    color: white;
+    border: none;
+    padding: 3px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: auto;
+    height: 25px;
+    font-size: 0.8em;
+  }
+
+.ok {
+    background-color: #73cf1d;
+    color: black;
+    border: 1px;
+}
+
+.ko {
+    background-color: hsl(0, 86%, 52%);
+    color: black;
+    border: 1px;
+}
+
+.tab-view {
+    margin: 0 10px 10px 10px;
+    padding: 10px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.tab-title {
+    margin: 0px 10px ;
+}
+
+.print-attempt {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
