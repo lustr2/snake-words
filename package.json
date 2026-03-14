@@ -3,14 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://lustr2.github.io/snake-words",
+  "homepage": ".",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:production": "tsc -b && vite build --mode production",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "pre-deploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "echo copy-adresar-dist-do-resources/static *.java a commit to git"
   },
   "dependencies": {
     "@react-oauth/google": "^0.12.1",

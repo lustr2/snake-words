@@ -72,6 +72,7 @@ const LoginPage: React.FC<LoginDataI> = ({ onClickLogin, onClickRegistration  })
     }, []);
 
 */
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleGoogleLogin = async (credentialResponse : any) => {
         
         try {
