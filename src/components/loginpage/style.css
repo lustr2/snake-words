@@ -32,19 +32,22 @@
   }
 
   .button-lang {
-    background-color: #d3d3d3; /* Light gray */
-    color: #333; /* Darker text for readability */
-    border: 1px solid #ccc;
+    background-color: #cccccc; /* 20% grey */
+    color: black; 
+    border: 1px solid #aaa;
+    padding: 3px 10px;
+    margin: 5px 2px;
   }
 
   .button-lang.active {
-    background-color: #a9a9a9; /* Slightly darker gray for active state */
+    background-color: #999999; /* 40% grey for active */
+    color: black;
     font-weight: bold;
-    border: 1px solid #888;
+    border: 1px solid #666;
   }
 
   .button-lang:hover {
-    background-color: #e0e0e0;
+    background-color: #bbbbbb;
   }
 
   .label-text {
