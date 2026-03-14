@@ -177,43 +177,43 @@ const GameSettings: React.FC<GameSettingsI>  = ({ handleSubmit, cancelSettings }
                     <label>{t('settings.language')}</label>
                     <button 
                         type="button" 
-                        className={i18n.language === 'cs' ? 'button-ok active' : 'button-ok'} 
+                        className={i18n.language === 'cs' ? 'button-lang active' : 'button-lang'} 
                         onClick={() => changeLanguage('cs')}>
                         CZ
                     </button>
                     <button 
                         type="button" 
-                        className={i18n.language === 'sk' ? 'button-ok active' : 'button-ok'} 
+                        className={i18n.language === 'sk' ? 'button-lang active' : 'button-lang'} 
                         onClick={() => changeLanguage('sk')}>
                         SK
                     </button>
                     <button 
                         type="button" 
-                        className={i18n.language.startsWith('en') ? 'button-ok active' : 'button-ok'} 
+                        className={i18n.language.startsWith('en') ? 'button-lang active' : 'button-lang'} 
                         onClick={() => changeLanguage('en')}>
                         EN
                     </button>
                     <button 
                         type="button" 
-                        className={i18n.language === 'de' ? 'button-ok active' : 'button-ok'} 
+                        className={i18n.language === 'de' ? 'button-lang active' : 'button-lang'} 
                         onClick={() => changeLanguage('de')}>
                         DE
                     </button>
                     <button 
                         type="button" 
-                        className={i18n.language === 'fr' ? 'button-ok active' : 'button-ok'} 
+                        className={i18n.language === 'fr' ? 'button-lang active' : 'button-lang'} 
                         onClick={() => changeLanguage('fr')}>
                         FR
                     </button>
                     <button 
                         type="button" 
-                        className={i18n.language === 'es' ? 'button-ok active' : 'button-ok'} 
+                        className={i18n.language === 'es' ? 'button-lang active' : 'button-lang'} 
                         onClick={() => changeLanguage('es')}>
                         ES
                     </button>
                     <button 
                         type="button" 
-                        className={i18n.language === 'pl' ? 'button-ok active' : 'button-ok'} 
+                        className={i18n.language === 'pl' ? 'button-lang active' : 'button-lang'} 
                         onClick={() => changeLanguage('pl')}>
                         PL
                     </button>

@@ -14,7 +14,7 @@
     border: 0px black solid;
 }
 
-.button-ok, .button-register {
+.button-ok, .button-register, .button-lang {
     background-color: hsl(120, 2%, 22%);
     color: white;
     border: none;
@@ -29,6 +29,22 @@
     width: auto;
     height: 25px;
     font-size: 0.8em;
+  }
+
+  .button-lang {
+    background-color: #d3d3d3; /* Light gray */
+    color: #333; /* Darker text for readability */
+    border: 1px solid #ccc;
+  }
+
+  .button-lang.active {
+    background-color: #a9a9a9; /* Slightly darker gray for active state */
+    font-weight: bold;
+    border: 1px solid #888;
+  }
+
+  .button-lang:hover {
+    background-color: #e0e0e0;
   }
 
   .label-text {
