@@ -1,0 +1,96 @@
+{
+  "app": {
+    "title": "Snake-words",
+    "footer": "Snake-words, creado por Lucie Struplova, 2024"
+  },
+  "menu": {
+    "settings": "Ajustes",
+    "statistics": "Estadísticas",
+    "history": "Historial",
+    "rules": "Reglas del juego",
+    "login": "Iniciar sesión",
+    "registration": "Registro",
+    "logout": "Cerrar sesión",
+    "newGame": "Nuevo juego",
+    "cancel": "Cancelar"
+  },
+  "settings": {
+    "title": "Ajustes de usuario",
+    "wordLength": "Longitud de las palabras:",
+    "autofill": "Autocompletar:",
+    "yes": "Sí",
+    "no": "No",
+    "language": "Idioma:",
+    "ok": "Ok",
+    "cancel": "Cancelar"
+  },
+  "rules": {
+    "title": "Reglas del juego Snake-words",
+    "header": "Reglas:",
+    "p1": "Adivinanza sencilla de palabras. Puedes elegir la longitud de las palabras que quieres adivinar. El tamaño mínimo de palabra es de 4 letras, el máximo es actualmente de 11 letras. El número de intentos para adivinar la palabra no está limitado.",
+    "p2": "Las palabras pueden estar en singular o plural de cualquier categoría gramatical. Al intentar adivinar una palabra, no es necesario que tenga sentido. (por ejemplo, adivinamos la palabra \"FOUKÁ\". Escribo HOUSX. Después de enviarlo, se evalúa el intento y continúas con el siguiente intento hasta que la adivines o cierres la aplicación). Si la letra está en el lugar correcto de la palabra, se resalta en verde; si la letra está en la palabra pero en el lugar equivocado, se resalta en amarillo. Una letra que no aparece en la palabra se resalta en gris claro. Todas las letras se pueden usar repetidamente hasta que se resuelva la palabra adivinada (incluso si está en gris). Si la letra aparece en la palabra más de una vez y no adivinamos todas sus posiciones correctamente, se resaltará en amarillo en el siguiente intento. Las letras también se pueden introducir directamente desde el teclado.",
+    "p3": "Se puede jugar cualquier número de partidas al día. Las palabras se eligen al azar a partir de la longitud de palabra establecida (Menú - Ajustes). La palabra adivinada se puede terminar en cualquier momento posterior. Todas las palabras jugadas y no jugadas se pueden encontrar en el menú \"Historial\" y, tras seleccionar la longitud de la palabra, haz clic en ella para continuar o ver cómo la hemos resuelto. Una vez que se ha jugado una palabra, no se puede volver a jugar nunca más.",
+    "p4_header": "Configuración de propiedades opcionales:",
+    "p4_text": "Puedes establecer la longitud de las palabras adivinadas entre 4 y 11 letras y si quieres que las letras adivinadas (posiciones de las letras en la palabra adivinada) se rellenen solas en el siguiente intento.",
+    "p5_header": "Registro:",
+    "p5_text": "Para poder jugar, es necesario registrarse. El registro es importante para que la aplicación funcione; sin él no es posible establecer y cambiar la longitud de las palabras y crear estadísticas e historial de las partidas jugadas. No recopilamos datos de los usuarios (solo nombre de usuario, contraseña, correo electrónico) y no enviamos ningún \"boletín de noticias\". El correo electrónico solo se utiliza para recuperar la cuenta si se olvida la contraseña. O bien, puedes iniciar sesión a través de una cuenta de Google.",
+    "p6_header": "Estadísticas:",
+    "p6_item1": "1. Global de todos los usuarios",
+    "p6_item2": "2. Estadísticas personales generales del usuario",
+    "p6_item3": "3. Por longitud de palabra. Lista de usuarios que han jugado la palabra seleccionada.",
+    "back": "Atrás"
+  },
+  "login": {
+    "title": "Iniciar sesión",
+    "userName": "Nombre de usuario:",
+    "password": "Contraseña:",
+    "userNamePlaceholder": "Nombre de usuario máx. 30",
+    "passwordPlaceholder": "Contraseña máx. 30",
+    "ok": "Ok",
+    "registration": "Registro"
+  },
+  "registration": {
+    "title": "Registro",
+    "userName": "Nombre de usuario:",
+    "password": "Contraseña:",
+    "confirmPassword": "Confirmar contraseña:",
+    "email": "Correo electrónico:",
+    "userNamePlaceholder": "Nombre de usuario máx. 30",
+    "passwordPlaceholder": "Contraseña máx. 30",
+    "emailPlaceholder": "Correo electrónico",
+    "ok": "Ok",
+    "back": "Atrás"
+  },
+  "history": {
+    "title": "Historial de juegos",
+    "loading": "Cargando ...",
+    "wordNo": "Palabra nº",
+    "notFinished": "No finalizado",
+    "noWords": "No hay palabras jugadas ....",
+    "back": "Atrás",
+    "continue": "Continuar"
+  },
+  "stats": {
+    "title": "Estadísticas del juego",
+    "global": "Global",
+    "user": "Usuario",
+    "word": "Palabra",
+    "totalGames": "Total de partidas jugadas:",
+    "doneGames": "Partidas completadas/incompletas:",
+    "totalUsers": "Total de jugadores registrados:",
+    "chooseLength": "Elegir longitud:",
+    "userStats": "Estadísticas del usuario",
+    "globalStats": "Estadísticas globales",
+    "avgGamesPerPlayer": "Promedio de partidas completadas por jugador:",
+    "completedByLength": "Partidas completadas por longitud de palabra:",
+    "length": "Longitud:",
+    "number": "Número:",
+    "userTable": "Tabla de usuarios - {{userName}}",
+    "completedIncompleted": "Completadas / Incompletas:",
+    "userCompletedByLength": "Partidas completadas/incompletas del usuario \"{{userName}}\" por longitud de palabra:"
+  },
+  "errors": {
+    "noMoreWords": "No hay más palabras...",
+    "wordNotFound": "Error: palabra no encontrada"
+  }
+}

@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { UserSettings, UserContext } from "../../context/SettingsContext";
 
 interface UserStatsProps {
@@ -6,6 +7,7 @@ interface UserStatsProps {
 }
 
 const UserStats: React.FC<UserStatsProps> = ({ optLen }) => {
+    const { t } = useTranslation();
     const [totalGameUser, setTotalGameUser] = useState <number>(0);
     const [totalDoneGame, setTotalDoneGame] = useState <number>(0);
     const [countDoneByLengthT, setCountDoneByLengthT] = useState <number[]>([]);
@@ -63,14 +65,14 @@ const UserStats: React.FC<UserStatsProps> = ({ optLen }) => {
         <>
             <div className="table-container">
                 <table className="styled-table">
-                    <caption>Users table - {user.userName}</caption>
+                    <caption>{t('stats.userTable', { userName: user.userName })}</caption>
                     <tbody>
                         <tr>
-                            <td className="value-cell-l">Total games played:</td>
+                            <td className="value-cell-l">{t('stats.totalGames')}</td>
                             <td className="value-cell-r">{totalGameUser}</td>
                         </tr>
                         <tr>
-                            <td className="value-cell-l">Completed / Incompleted:</td>
+                            <td className="value-cell-l">{t('stats.completedIncompleted')}</td>
                             <td className="value-cell-r">{totalDoneGame}/{totalGameUser-totalDoneGame}</td>
                         </tr>
                         </tbody>
@@ -78,16 +80,16 @@ const UserStats: React.FC<UserStatsProps> = ({ optLen }) => {
             </div>
             <div className="table-container">
                 <table className="styled-table">
-                    <caption>Completed/Incompleted games of user "{user.userName}" by word length:</caption>
+                    <caption>{t('stats.userCompletedByLength', { userName: user.userName })}</caption>
                     <tbody>
                         <tr>
-                            <td>Length: </td>
+                            <td>{t('stats.length')} </td>
                             {optLen.map((o, index) => (
                                  <td key={index}>{(o !== undefined)&& o }</td>
                             ))}
                         </tr>
                         <tr>
-                            <td>Number: </td>
+                            <td>{t('stats.number')} </td>
                             {optLen.map((_, index) => (
                                 <td key={index}>{(countDoneByLengthT[index] !== undefined) ? countDoneByLengthT[index]+'/'+ countDoneByLengthF[index] : ''}</td> 
                              ))}

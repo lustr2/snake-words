@@ -1,0 +1,96 @@
+{
+  "app": {
+    "title": "Snake-words",
+    "footer": "Snake-words, created by Lucie Struplova, 2024"
+  },
+  "menu": {
+    "settings": "Settings",
+    "statistics": "Statistics",
+    "history": "History",
+    "rules": "Game rules",
+    "login": "Login",
+    "registration": "Registration",
+    "logout": "Logout",
+    "newGame": "New game",
+    "cancel": "Cancel"
+  },
+  "settings": {
+    "title": "Settings for user",
+    "wordLength": "Length words:",
+    "autofill": "Autofill:",
+    "yes": "Yes",
+    "no": "No",
+    "language": "Language:",
+    "ok": "Ok",
+    "cancel": "Cancel"
+  },
+  "rules": {
+    "title": "Rules game Snake-words",
+    "header": "Rules:",
+    "p1": "Simple guessing of words. You can choose the length of the words you want to guess. The minimum word size is 4 letters, the maximum is currently 11 letters. The number of attempts to guess the word is not limited.",
+    "p2": "Words can be in singular or plural of any part of speech. When trying to guess a word, it does not have to make sense. (e.g. we guess the word \"FOUKÁ\". I enter HOUSX. After submitting, the attempt is evaluated and you continue with the next attempt until you guess it or close the application). If the letter is in the correct place in the word, it is highlighted in green, if the letter is in the word but in the wrong place, it is highlighted in yellow. A letter that does not appear in the word is highlighted in light gray. All letters can be used repeatedly until the guessed word is solved (even if it is gray). If the letter is in the word more than once and we do not guess all its positions correctly, it will be highlighted in yellow in the next attempt. Letters can also be entered directly from the keyboard.",
+    "p3": "Any number of games can be played per day. Words are chosen randomly from the set word length (Menu - Settings). The guessed word can be finished at any time later. All played and unplayed words can be found in the \"History\" menu and after selecting the word length, click on it to continue or see how we solved it. Once a word has been played, it can never be played again.",
+    "p4_header": "Setting optional properties:",
+    "p4_text": "You can set the length of the guessed words to 4-11 letters and whether we want the guessed letters (positions of letters in the guessed word) to fill themselves in the next attempt.",
+    "p5_header": "Registration:",
+    "p5_text": "In order to play, you need to register. Registration is important for the application to work, without it it is not possible to set and change the length of words and create statistics and history of played games. We do not collect user data (only username, password, email) and we do not send any \"newsletters\". Email is only used to recover the account if the password is forgotten. Or you can log in via a google account.",
+    "p6_header": "Statistics:",
+    "p6_item1": "1. Global across all users",
+    "p6_item2": "2. General personal statistics of the user",
+    "p6_item3": "3. By word length. List of users who played the selected word.",
+    "back": "Back"
+  },
+  "login": {
+    "title": "Login",
+    "userName": "User name:",
+    "password": "Password:",
+    "userNamePlaceholder": "User name max 30",
+    "passwordPlaceholder": "Password max 30",
+    "ok": "Ok",
+    "registration": "Registration"
+  },
+  "registration": {
+    "title": "Registration",
+    "userName": "User name:",
+    "password": "Password:",
+    "confirmPassword": "Confirm password:",
+    "email": "Email:",
+    "userNamePlaceholder": "User name max 30",
+    "passwordPlaceholder": "Password max 30",
+    "emailPlaceholder": "Email",
+    "ok": "Ok",
+    "back": "Back"
+  },
+  "history": {
+    "title": "History games",
+    "loading": "Loading ...",
+    "wordNo": "Word no.",
+    "notFinished": "Not finished",
+    "noWords": "No played words ....",
+    "back": "Back",
+    "continue": "Continue"
+  },
+  "stats": {
+    "title": "Statistics game",
+    "global": "Global",
+    "user": "User",
+    "word": "Word",
+    "totalGames": "Total games played:",
+    "doneGames": "Completed/Incompleted games:",
+    "totalUsers": "Total registered players:",
+    "chooseLength": "Choose length:",
+    "userStats": "User Statistics",
+    "globalStats": "Global Statistics",
+    "avgGamesPerPlayer": "Average of completed games per player:",
+    "completedByLength": "Completed word length games:",
+    "length": "Length:",
+    "number": "Number:",
+    "userTable": "Users table - {{userName}}",
+    "completedIncompleted": "Completed / Incompleted:",
+    "userCompletedByLength": "Completed/Incompleted games of user \"{{userName}}\" by word length:"
+  },
+  "errors": {
+    "noMoreWords": "No more words...",
+    "wordNotFound": "Error: word not found"
+  }
+}

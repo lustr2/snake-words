@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface GlobalStatsProps {
     optLen: number[];
 }
 
 const GlobalStats: React.FC<GlobalStatsProps> = ({ optLen }) => {
+    const { t } = useTranslation();
     const [totalCount, setTotalCount] = useState <number>(-1);
     const [countUsers, setCountUsers] = useState <number>(-1);
     const [countDoneGames, setCountDoneGames] = useState <number>(-1);
@@ -68,22 +70,22 @@ const GlobalStats: React.FC<GlobalStatsProps> = ({ optLen }) => {
         <>
             <div className="table-container">
                 <table className="styled-table">
-                    <caption>Global Statistics</caption>
+                    <caption>{t('stats.globalStats')}</caption>
                     <tbody>
                         <tr>
-                            <td className="value-cell-l">Total games played:</td>
+                            <td className="value-cell-l">{t('stats.totalGames')}</td>
                             <td className="value-cell-r">{totalCount}</td>
                         </tr>
                         <tr>
-                            <td className="value-cell-l">Completed/Incompleted games:</td>
+                            <td className="value-cell-l">{t('stats.doneGames')}</td>
                             <td className="value-cell-r">{countDoneGames}/{totalCount - countDoneGames}</td>
                         </tr>
                         <tr>
-                            <td className="value-cell-l">Total registered players:</td>
+                            <td className="value-cell-l">{t('stats.totalUsers')}</td>
                             <td className="value-cell-r">{countUsers}</td>
                         </tr>
                         <tr>
-                            <td className="value-cell-l">Average of completed games per player:</td>
+                            <td className="value-cell-l">{t('stats.avgGamesPerPlayer')}</td>
                             <td className="value-cell-r">{Math.round(countDoneGames / countUsers)}</td>
                         </tr>
                     </tbody>
@@ -92,17 +94,17 @@ const GlobalStats: React.FC<GlobalStatsProps> = ({ optLen }) => {
             {(optLen.length > 0 && countDoneByLength.length > 0) &&
             <div className="table-container">
                 <table className="styled-table">
-                    <caption>Completed word length games:</caption>
+                    <caption>{t('stats.completedByLength')}</caption>
                     <tbody>
                         <tr>
-                            <td>Length: </td>
+                            <td>{t('stats.length')} </td>
 
                         {optLen.map((o, index) => (
                             <td key={index}>{((o !== undefined) && (countDoneByLength[index]>=0)) ? o : ''}</td> // Zajistí zobrazení prázdné buňky
                         ))}
                         </tr>
                         <tr>
-                            <td>Number: </td>
+                            <td>{t('stats.number')} </td>
 
                         {optLen.map((_, index) => (
                             <td key={index}>{countDoneByLength[index] !== undefined ? countDoneByLength[index] : ''}</td> // Udržení stejné struktury s prázdnými hodnotami

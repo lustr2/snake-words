@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Deskboard from './components/deskboard/Deskboard';
 import Keyboard from './components/keyboard/Keyboard';
 import { LetterObject } from './components/data/Data';
@@ -18,6 +19,7 @@ import StatisticsGame from './components/statisticsgame/StatisticsGame';
 
 
 function App() {
+  const { t } = useTranslation();
   /** Menu */
   const [showSettings, setShowSettings] = useState<boolean>(false);
   const [viewHistory, setViewHistory] = useState<boolean>(false);
@@ -309,7 +311,7 @@ function App() {
         countCycle--;
       }
       if (countCycle === 0 ) {
-        setErrorText('Nejsou dalsi slova ...');
+        setErrorText(t('errors.noMoreWords'));
       }
     } else {
 //     console.log('ELSE - to neni dokoncene, rozepsane slovo zahod');
@@ -576,7 +578,7 @@ function App() {
       if (tmpPointer !== -1) {
         continueGame(continueAW, continueShots);
       } else {
-        setErrorText('Error: word not found');
+        setErrorText(t('errors.wordNotFound'));
       }
     }
   }, [slovaZDB]);
@@ -637,32 +639,32 @@ function App() {
       <UserContext.Provider value={{...login }}> 
       <div className="app-container">
         <div className="header">
-          <div className="title-bar">Snake-words</div>
+          <div className="title-bar">{t('app.title')}</div>
             <div className="menu-bar">
               <div className="menu-button">&#9776;
                 <div className="dropdown-content">
                     {((login.id !==0)  && ((activeWord.length === 0)|| (finish))) &&  
                       <>
-                        <a href="#" onClick={handleSettingsClick} >Settings</a>
-                        <a href="#" onClick={handleStatisticsClick} >Statistics</a>
-                        <a href="#" onClick={handleHistoryClick} >History</a>
+                        <a href="#" onClick={handleSettingsClick} >{t('menu.settings')}</a>
+                        <a href="#" onClick={handleStatisticsClick} >{t('menu.statistics')}</a>
+                        <a href="#" onClick={handleHistoryClick} >{t('menu.history')}</a>
                       </>
                     }
-                    <a href="#" onClick={handleRulesGame}>Game rules</a>
+                    <a href="#" onClick={handleRulesGame}>{t('menu.rules')}</a>
                 </div>
               </div>
               { ((!loginNow) && (!registrationNew) && (login.id === 0)) &&
                   <button 
                     className='login'
                     onClick={loginButton}>
-                    Login
+                    {t('menu.login')}
                   </button> 
               }
               {  ((registrationNew) && (loginNow)) && 
                     <button 
                     className='login'
                     onClick={registrationButton}>
-                    Registration
+                    {t('menu.registration')}
                   </button> 
               }
               { (login.id !== 0) && 
@@ -670,7 +672,7 @@ function App() {
                   <button 
                     className='logout'
                     onClick={logoutButton}>
-                    Logout
+                    {t('menu.logout')}
                   </button>
                 </>
               }
@@ -678,7 +680,7 @@ function App() {
                   <button 
                       className={finish ? "new-game" : "cancel-game"}
                       onClick={choiceModel}>
-                    {finish ? 'New game' : 'Cancel'}
+                    {finish ? t('menu.newGame') : t('menu.cancel')}
                   </button>
               }
             </div>
@@ -734,7 +736,7 @@ function App() {
           {errorText}
         </div>
         <div className="footer">
-          Snake-words, created by Lucie Struplova, 2024
+          {t('app.footer')}
         </div>
       </UserContext.Provider>    
     </>

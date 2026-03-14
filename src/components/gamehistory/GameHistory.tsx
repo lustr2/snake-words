@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Tabs from '../tabs/Tabs';
 import { ViewOptionDb } from '../../utils/OptionsLengthValue';
 import { UserSettings } from '../context/SettingsContext';
@@ -15,6 +16,7 @@ interface GameHistoryProps {
 }
 
 const GameHistory: React.FC<GameHistoryProps> = ({ user, continueWord }) => {
+    const { t } = useTranslation();
 	const [activeTab, setActiveTab] = useState<number>(0);
   const [tabNames, setTabNames] = useState<string[]>([]);
   const [historyGame, setHistoryGame] = useState<HistoryUserPerGame[][]>([]);
@@ -123,7 +125,7 @@ const GameHistory: React.FC<GameHistoryProps> = ({ user, continueWord }) => {
 
   return (
       <>
-        <div className="body-title">History games</div>
+        <div className="body-title">{t('history.title')}</div>
         <div className='tab-title'> 
           <Tabs tabNames={tabNames} activeTab={activeTab} onTabChange={handleTabChange} />
         </div>
@@ -135,35 +137,35 @@ const GameHistory: React.FC<GameHistoryProps> = ({ user, continueWord }) => {
                                                             value={h.idWord} 
                                                             onClick={handleClickWord}
                                                     >
-                                                      Word no. {h.idWord}
+                                                      {t('history.wordNo')} {h.idWord}
                                                     </button>) 
-                  : <div className="body-title">Loading ... </div> 
+                  : <div className="body-title">{t('history.loading')}</div> 
               ) 
             : <div className='body-title'>
-                <div> Word No: {historyGame[activeTab][historyGame[activeTab].findIndex(h => h.idWord===activeWord)].idWord } </div>
+                <div> {t('history.wordNo')}: {historyGame[activeTab][historyGame[activeTab].findIndex(h => h.idWord===activeWord)].idWord } </div>
                   <div>  { !historyGame[activeTab][historyGame[activeTab].findIndex(h => h.idWord===activeWord)].done &&
 //                    ? historyGame[activeTab][historyGame[activeTab].findIndex(h => h.idWord===activeWord)].attempt.map((a, i) => <div key={i}>{i+1}. {a} </div>) 
-                            ' Nedokonceno'
+                            t('history.notFinished')
                          }
                   </div>
               </div>
           }
           {(historyGame[activeTab]?.length === 0)&&
-             <div className="body-title">No played words .... </div>
+             <div className="body-title">{t('history.noWords')}</div>
           }
           <div className='print-attempt'>
             {(activeWord > 0)&& 
                 <div className="line-container">
 {                  <Tryboard agShots={historyGame[activeTab][historyGame[activeTab].findIndex(h => h.idWord===activeWord)].attempt} model={historyGame[activeTab][historyGame[activeTab].findIndex(h => h.idWord===activeWord)].word}  /> }
                   <div>
-                      <button className='login' onClick={handleClickBack}>Back</button>
+                      <button className='login' onClick={handleClickBack}>{t('history.back')}</button>
                       {(!historyGame[activeTab][historyGame[activeTab].findIndex(h => h.idWord===activeWord)].done)&&
                           <button className='continue-game' 
                                   value={activeWord} 
                                   onClick={() => 
                                     handleClickContinue(historyGame[activeTab][historyGame[activeTab].findIndex(h => h.idWord===activeWord)].word.length,
                                                         historyGame[activeTab][historyGame[activeTab].findIndex(h => h.idWord===activeWord)].attempt)}
-                          >Continue</button>
+                          >{t('history.continue')}</button>
                       }
                   </div>
                 </div>

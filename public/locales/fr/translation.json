@@ -1,0 +1,97 @@
+{
+  "app": {
+    "title": "Snake-words",
+    "footer": "Snake-words, créé par Lucie Struplova, 2024"
+  },
+  "menu": {
+    "settings": "Paramètres",
+    "statistics": "Statistiques",
+    "history": "Historique",
+    "rules": "Règles du jeu",
+    "login": "Connexion",
+    "registration": "Inscription",
+    "logout": "Déconnexion",
+    "newGame": "Nouveau jeu",
+    "cancel": "Annuler"
+  },
+  "settings": {
+    "title": "Paramètres utilisateur",
+    "wordLength": "Longueur des mots :",
+    "autofill": "Remplissage auto :",
+    "yes": "Oui",
+    "no": "Non",
+    "language": "Langue :",
+    "ok": "Ok",
+    "cancel": "Annuler"
+  },
+  "rules": {
+    "title": "Règles du jeu Snake-words",
+    "header": "Règles :",
+    "p1": "Devinette simple de mots. Vous pouvez choisir la longueur des mots que vous voulez deviner. La taille minimale d'un mot est de 4 lettres, la taille maximale est actuellement de 11 lettres. Le nombre de tentatives pour deviner le mot n'est pas limité.",
+    "p2": "Les mots peuvent être au singulier ou au pluriel, quelle que soit leur nature grammaticale. Lorsque vous essayez de deviner un mot, il n'est pas nécessaire qu'il ait un sens. (Par exemple, nous devinons le mot \"FOUKÁ\". Je saisis HOUSX. Après l'envoi, la tentative est évaluée et vous continuez avec la tentative suivante jusqu'à ce que vous le deviniez ou que vous fermiez l'application). Si la lettre est à la bonne place dans le mot, elle est surlignée en vert ; si la lettre est dans le mot mais à la mauvaise place, elle est surlignée en jaune. Une lettre qui ne figure pas dans le mot est surlignée en gris clair. Toutes les lettres peuvent être utilisées à plusieurs reprises jusqu'à ce que le mot deviné soit résolu (même si elle est grise). Si la lettre figure dans le mot plus d'une fois et que nous ne devinons pas correctement toutes ses positions, elle sera surlignée en jaune lors de la tentative suivante. Les lettres peuvent également être saisies directement au clavier.",
+    "p3": "Il est possible de jouer n'importe quel nombre de parties par jour. Les mots sont choisis au hasard en fonction de la longueur de mot définie (Menu - Paramètres). Le mot à deviner peut être terminé à n'importe quel moment ultérieur. Tous les mots joués et non joués se trouvent dans le menu \"Historique\" ; après avoir sélectionné la longueur du mot, cliquez dessus pour continuer ou voir comment nous l'avons résolu. Une fois qu'un mot a été joué, il ne peut plus jamais l'être.",
+    "p4_header": "Réglage des propriétés optionnelles :",
+    "p4_text": "Vous pouvez régler la longueur des mots à deviner de 4 à 11 lettres et choisir si vous voulez que les lettres devinées (positions des lettres dans le mot à deviner) se remplissent d'elles-mêmes lors de la tentative suivante.",
+    "p5_header": "Inscription :",
+    "p5_text": "Pour pouvoir jouer, vous devez vous inscrire. L'inscription est importante pour le fonctionnement de l'application, sans elle il n'est pas possible de définir et de modifier la longueur des mots et de créer des statistiques et un historique des jeux joués. Nous ne collectons pas de données sur les utilisateurs (uniquement le nom d'utilisateur, le mot de passe, l'e-mail) et nous n'envoyons pas de \"lettres d'information\". L'e-mail n'est utilisé que pour récupérer le compte si le mot de passe est oublié. Vous pouvez également vous connecter via un compte Google.",
+    "p6_header": "Statistiques :",
+    "p6_item1": "1. Globales pour tous les utilisateurs",
+    "p6_item2": "2. Statistiques personnelles générales de l'utilisateur",
+    "p6_item3": "3. Par longueur de mot. Liste des utilisateurs ayant joué le mot sélectionné.",
+    "back": "Retour"
+  },
+  "login": {
+    "title": "Connexion",
+    "userName": "Nom d'utilisateur :",
+    "password": "Mot de passe :",
+    "userNamePlaceholder": "Nom d'utilisateur max 30",
+    "passwordPlaceholder": "Mot de passe max 30",
+    "ok": "Ok",
+    "registration": "Inscription"
+  },
+  "registration": {
+    "title": "Inscription",
+    "userName": "Nom d'utilisateur :",
+    "password": "Mot de passe :",
+    "confirmPassword": "Confirmer le mot de passe :",
+    "email": "E-mail :",
+    "userNamePlaceholder": "Nom d'utilisateur max 30",
+    "passwordPlaceholder": "Mot de passe max 30",
+    "emailPlaceholder": "E-mail",
+    "ok": "Ok",
+    "back": "Retour"
+  },
+  "history": {
+    "title": "Historique des jeux",
+    "loading": "Chargement ...",
+    "wordNo": "Mot n°",
+    "notFinished": "Non terminé",
+    "noWords": "Pas de mots joués ....",
+    "back": "Retour",
+    "continue": "Continuer"
+  },
+  "stats": {
+    "title": "Statistiques du jeu",
+    "global": "Global",
+    "user": "Utilisateur",
+    "word": "Mot",
+    "totalGames": "Total des parties jouées :",
+    "doneGames": "Parties terminées/incomplètes :",
+    "totalUsers": "Total des joueurs inscrits :",
+    "chooseLength": "Choisir la longueur :",
+    "userStats": "Statistiques de l'utilisateur",
+    "globalStats": "Statistiques globales",
+    "avgGamesPerPlayer": "Moyenne de parties terminées par joueur :",
+    "completedByLength": "Parties terminées par longueur de mot :",
+    "length": "Longueur :",
+    "number": "Nombre :",
+    "userTable": "Tableau des utilisateurs - {{userName}}",
+    "completedIncompleted": "Terminées / Incomplètes :",
+    "userCompletedByLength": "Jeux terminés/incomplets de l'utilisateur \"{{userName}}\" par longueur de mot :"
+    },
+    "errors": {
+    "noMoreWords": "Plus de mots...",
+    "wordNotFound": "Erreur : mot non trouvé"
+    }
+    }
+

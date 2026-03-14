@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { UserSettings } from "../context/SettingsContext";
 
 interface RegistrationDataI {
@@ -6,6 +7,7 @@ interface RegistrationDataI {
 }
 
 const LoginPage: React.FC<RegistrationDataI> = ({ onClickRegistration }) => {
+    const { t } = useTranslation();
     const [userName, setUserName] = useState<string>('');
     const [password, setPassword] = useState<string>('');
     const [email, setEmail] = useState<string>('');
@@ -53,40 +55,40 @@ const LoginPage: React.FC<RegistrationDataI> = ({ onClickRegistration }) => {
     return (
         <>
             <div className="login-content">
-              <div className="body-title">Registration</div>  
+              <div className="body-title">{t('registration.title')}</div>  
                 <form onSubmit={onSubmitRegistration} >
                   <div className="form-group">
-                    <label className="label-text">User name:</label>
+                    <label className="label-text">{t('registration.userName')}</label>
                     <input 
                         type="text" 
                         name='userName' 
                         onChange={(e) => setUserName(e.target.value)}
                         maxLength={30} 
-                        placeholder="User name max 30" 
+                        placeholder={t('registration.userNamePlaceholder')} 
                     />
                   </div>
                   <div className="form-group">
-                    <label className="label-text">Password:</label>
+                    <label className="label-text">{t('registration.password')}</label>
                     <input 
                         type="password" 
                         name='password'
                         onChange={(e) => setPassword(e.target.value)} 
                         maxLength={30} 
-                        placeholder="Password max 30" 
+                        placeholder={t('registration.passwordPlaceholder')} 
                     />
                   </div>
                   <div className="form-group">
-                    <label className="label-text">Email:</label>
+                    <label className="label-text">{t('registration.email')}</label>
                     <input 
                         type="email" 
                         name='email'
                         onChange={(e) => setEmail(e.target.value)}
                         maxLength={50} 
-                        placeholder="Email max 50" 
+                        placeholder={t('registration.emailPlaceholder')} 
                     />
                   </div>
                   <div className="body-title">
-                    <button type='submit' className="button-ok">Ok</button> 
+                    <button type='submit' className="button-ok">{t('registration.ok')}</button> 
                     </div>
                 </form>
             </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
+import { useTranslation } from "react-i18next";
 import { UserSettings, UserContext } from "../context/SettingsContext";
 import { ViewOptionDb } from "../../utils/OptionsLengthValue";
 import '../loginpage/style.css';
@@ -9,7 +10,7 @@ interface GameSettingsI {
 }
 
 const GameSettings: React.FC<GameSettingsI>  = ({ handleSubmit, cancelSettings }) => {
-
+    const { t, i18n } = useTranslation();
     const user: UserSettings = useContext(UserContext);
 
     const [settings, setSettings] = useState<UserSettings>({
@@ -127,14 +128,18 @@ const GameSettings: React.FC<GameSettingsI>  = ({ handleSubmit, cancelSettings }
 //        handleSubmit(settings);
     }
 
+    const changeLanguage = (lng: string) => {
+        i18n.changeLanguage(lng);
+    };
+
     return (
         <>
             <div className="login-content">
-              <div className="login-title">Settings for user</div>  
+              <div className="login-title">{t('settings.title')}</div>  
                 <form onSubmit={onSubmitSettings}>
                   <div className="form-group">
                     <label>
-                        Length words:
+                        {t('settings.wordLength')}
                         <select 
                             defaultValue={settings.actLengthWords}
                             onChange={onChangeOptionsLength} > 
@@ -147,8 +152,8 @@ const GameSettings: React.FC<GameSettingsI>  = ({ handleSubmit, cancelSettings }
                         </select>
                     </label>
                   </div>
-                  <div>
-                    <label>Autofill:</label>
+                  <div className="form-group">
+                    <label>{t('settings.autofill')}</label>
                     <label>
                         <input 
                             type="radio" 
@@ -156,7 +161,7 @@ const GameSettings: React.FC<GameSettingsI>  = ({ handleSubmit, cancelSettings }
                             value="true"
                             checked={settings.autoFill}
                             onChange={onChangeOptionsAutoFill} /> 
-                            Yes
+                            {t('settings.yes')}
                     </label>
                     <label>
                         <input 
@@ -165,33 +170,57 @@ const GameSettings: React.FC<GameSettingsI>  = ({ handleSubmit, cancelSettings }
                             value="false"
                             checked={!settings.autoFill}
                             onChange={onChangeOptionsAutoFill} /> 
-                            No
+                            {t('settings.no')}
                     </label>
                   </div>
-                  {/* <div>
-                    <label>Only exists words:</label>
-                    <label>
-                        <input 
-                            type="radio" 
-                            name="autocorrect"
-                            value="true"
-                            checked={settings.autoCorrect}
-                            onChange={onChangeOptionsAutoCorrect} /> 
-                            Yes
-                    </label>
-                    <label>
-                        <input 
-                            type="radio" 
-                            name="autocorrect"
-                            value="false"
-                            checked={!settings.autoCorrect}
-                            onChange={onChangeOptionsAutoCorrect} /> 
-                            No
-                    </label>
-                  </div> */}
+                  <div className="form-group">
+                    <label>{t('settings.language')}</label>
+                    <button 
+                        type="button" 
+                        className={i18n.language === 'cs' ? 'button-ok active' : 'button-ok'} 
+                        onClick={() => changeLanguage('cs')}>
+                        CZ
+                    </button>
+                    <button 
+                        type="button" 
+                        className={i18n.language === 'sk' ? 'button-ok active' : 'button-ok'} 
+                        onClick={() => changeLanguage('sk')}>
+                        SK
+                    </button>
+                    <button 
+                        type="button" 
+                        className={i18n.language.startsWith('en') ? 'button-ok active' : 'button-ok'} 
+                        onClick={() => changeLanguage('en')}>
+                        EN
+                    </button>
+                    <button 
+                        type="button" 
+                        className={i18n.language === 'de' ? 'button-ok active' : 'button-ok'} 
+                        onClick={() => changeLanguage('de')}>
+                        DE
+                    </button>
+                    <button 
+                        type="button" 
+                        className={i18n.language === 'fr' ? 'button-ok active' : 'button-ok'} 
+                        onClick={() => changeLanguage('fr')}>
+                        FR
+                    </button>
+                    <button 
+                        type="button" 
+                        className={i18n.language === 'es' ? 'button-ok active' : 'button-ok'} 
+                        onClick={() => changeLanguage('es')}>
+                        ES
+                    </button>
+                    <button 
+                        type="button" 
+                        className={i18n.language === 'pl' ? 'button-ok active' : 'button-ok'} 
+                        onClick={() => changeLanguage('pl')}>
+                        PL
+                    </button>
+                  </div>
                   <div>
-                    <button type='submit' className="button-ok">Ok</button> 
-                    <button type='button' className="button-ok" onClick={cancelSettings}>Cancel</button> 
+                    <button type='submit' className="button-ok">{t('settings.ok')}</button> 
+                    <button type='button' className="button-ok" onClick={cancelSettings}>{t('settings.cancel')}</button> 
                   </div>
                 </form>    
             </div>        

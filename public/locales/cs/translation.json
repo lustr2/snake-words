@@ -1,0 +1,96 @@
+{
+  "app": {
+    "title": "Snake-words",
+    "footer": "Snake-words, vytvořila Lucie Štruplová, 2024"
+  },
+  "menu": {
+    "settings": "Nastavení",
+    "statistics": "Statistiky",
+    "history": "Historie",
+    "rules": "Pravidla hry",
+    "login": "Přihlášení",
+    "registration": "Registrace",
+    "logout": "Odhlásit",
+    "newGame": "Nová hra",
+    "cancel": "Zrušit"
+  },
+  "settings": {
+    "title": "Nastavení pro uživatele",
+    "wordLength": "Délka slov:",
+    "autofill": "Automatické doplňování:",
+    "yes": "Ano",
+    "no": "Ne",
+    "language": "Jazyk:",
+    "ok": "Ok",
+    "cancel": "Zrušit"
+  },
+  "rules": {
+    "title": "Pravidla hry Snake-words",
+    "header": "Pravidla:",
+    "p1": "Jednoduché hádání českých slov. Můžete si zvolit velikost slov, které chcete hádat. Minimální velikost slov jsou 4 písmena, maximální je aktuálně na 11 písmenech. Počet pokusů na uhodnutí slova není nijak omezen.",
+    "p2": "Slova mohou být v jednotném i množném čísle libovolného slovního druhu. Písmeno \"CH\" je považováno za 2 znaky. Při pokusech uhodnout slovo není nutné, aby dávalo smysl. (Např. hádáme slovo \"FOUKÁ\". Zadám HOUSX. Po odeslání se pokus vyhodnotí a pokračujete dalším pokusem, dokud jej neuhádnete, nebo nezavřete aplikaci). Pokud je písmeno ve slově na správném místě je podbarveno zeleně, pokud je písmeno ve slově, ale na špatném místě, je podbarveno žlutě. Písmeno, které se ve slově nevyskytuje je podbarveno světle šedivě. Všechna písmena lze až do vyřešení hádaného slova použít opakovaně (i když je šedivé). Pokud je písmeno vícekrát ve slově a neuhádneme všechny jeho pozice správně, bude v dalším pokusu podbarveno žlutě. Písmena lze vepsat i přímo z klávesnice.",
+    "p3": "Lze odehrát libovolný počet her za den. Slova jsou vybírána náhodně z nastavené délky slova (Menu - Nastavení). Hádané slovo lze dohrát kdykoli později. Všechna odehraná i neodehraná slova lze najít v menu \"Historie\" a po vybrání délky slova na něj kliknout na pokračovat nebo si prohlédnout, jak jsme jej řešili. Jednou odehrané slovo již nelze nikdy hrát znovu.",
+    "p4_header": "Nastavení volitelných vlastností:",
+    "p4_text": "Lze si nastavit délku hádaných slov 4-11 písmen a zda chceme, aby uhodnutá písmena (pozice písmen v hádaném slově) se sama v dalším pokusu vyplnila.",
+    "p5_header": "Registrace:",
+    "p5_text": "K tomu, aby jste se mohli hrát, je třeba se zaregistrovat. Registrace je důležitá pro fungování aplikace, bez ní není možné nastavovat a měnit délku slov a vytvářet statistiky a historii odehraných her. Nesbíráme data o uživateli (pouze uživatelské jméno, heslo, email) a neodesíláme žádné \"newslettery\". Email slouží pouze pro obnovení účtu při zapomenutém heslu. Nebo se lze přihlásit přes Google účet.",
+    "p6_header": "Statistiky:",
+    "p6_item1": "1. Globální přes všechny uživatele",
+    "p6_item2": "2. Obecná osobní statistika uživatele",
+    "p6_item3": "3. Podle délky slov. Seznam uživatelů, kteří vybrané slovo hráli.",
+    "back": "Zpět"
+  },
+  "login": {
+    "title": "Přihlášení",
+    "userName": "Uživatelské jméno:",
+    "password": "Heslo:",
+    "userNamePlaceholder": "Uživatelské jméno max 30",
+    "passwordPlaceholder": "Heslo max 30",
+    "ok": "Ok",
+    "registration": "Registrace"
+  },
+  "registration": {
+    "title": "Registrace",
+    "userName": "Uživatelské jméno:",
+    "password": "Heslo:",
+    "confirmPassword": "Potvrďte heslo:",
+    "email": "Email:",
+    "userNamePlaceholder": "Uživatelské jméno max 30",
+    "passwordPlaceholder": "Heslo max 30",
+    "emailPlaceholder": "Email",
+    "ok": "Ok",
+    "back": "Zpět"
+  },
+  "history": {
+    "title": "Historie her",
+    "loading": "Načítání ...",
+    "wordNo": "Slovo č.",
+    "notFinished": "Nedokončeno",
+    "noWords": "Žádná odehraná slova ....",
+    "back": "Zpět",
+    "continue": "Pokračovat"
+  },
+  "stats": {
+    "title": "Statistiky hry",
+    "global": "Globální",
+    "user": "Uživatel",
+    "word": "Slovo",
+    "totalGames": "Celkem odehraných her:",
+    "doneGames": "Dokončené/Nedokončené hry:",
+    "totalUsers": "Celkem registrovaných hráčů:",
+    "chooseLength": "Vyberte délku:",
+    "userStats": "Osobní statistiky",
+    "globalStats": "Globální statistiky",
+    "avgGamesPerPlayer": "Průměr dokončených her na hráče:",
+    "completedByLength": "Dokončené hry podle délky slov:",
+    "length": "Délka:",
+    "number": "Počet:",
+    "userTable": "Tabulka uživatele - {{userName}}",
+    "completedIncompleted": "Dokončené / Nedokončené:",
+    "userCompletedByLength": "Dokončené/Nedokončené hry uživatele \"{{userName}}\" podle délky slov:"
+  },
+  "errors": {
+    "noMoreWords": "Nejsou další slova...",
+    "wordNotFound": "Chyba: slovo nebylo nalezeno"
+  }
+}

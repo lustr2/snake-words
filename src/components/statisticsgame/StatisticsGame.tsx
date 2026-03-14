@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 //import { UserSettings, UserContext } from "../context/SettingsContext";
 import { ViewOptionDb } from "../../utils/OptionsLengthValue";
 import Tabs from "../tabs/Tabs";
@@ -11,8 +12,9 @@ interface StatisticsGameProps {
 }
 
 const StatisticsGame: React.FC<StatisticsGameProps> = () => {
+    const { t } = useTranslation();
     const [activeTab, setActiveTab] = useState<number>(0);
-    const tabNames: string[] = ['Global', 'User', 'Word'];
+    const tabNames: string[] = [t('stats.global'), t('stats.user'), t('stats.word')];
     const [optionValue, setOptionValue] = useState<number[]>([]);
     const [isLoaded, setIsLoaded] = useState <boolean> (false);
 
@@ -44,7 +46,7 @@ const StatisticsGame: React.FC<StatisticsGameProps> = () => {
 
     return(
         <>
-            <div className="body-title">Statistics game</div>
+            <div className="body-title">{t('stats.title')}</div>
             <div className='tab-title'> 
                 <Tabs tabNames={tabNames} activeTab={activeTab} onTabChange={handleTabChange} />
             </div>

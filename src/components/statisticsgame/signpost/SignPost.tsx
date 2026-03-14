@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import WordStats from "../wordstats/WordStats";
 import '../../../index.css';
 
@@ -8,6 +9,7 @@ interface SignPostProps {
 }
 
 const SignPost: React.FC<SignPostProps> = ({ optLen }) => {
+    const { t } = useTranslation();
     const [home, setHome] = useState<number>(0);
 
     const handleClickPost = (n: number) => {
@@ -25,7 +27,7 @@ const SignPost: React.FC<SignPostProps> = ({ optLen }) => {
                 <WordStats lengthWord={home} back={handleClickBack} />
                 :
                 <>  
-                    <label className="tab-title">Choose length: </label>
+                    <label className="tab-title">{t('stats.chooseLength')} </label>
                     {optLen.map((o, index) => 
                         <button className="login" key={index} onClick={() => handleClickPost(o)}>{o}</button>
                     )}

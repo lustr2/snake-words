@@ -1,0 +1,96 @@
+{
+  "app": {
+    "title": "Snake-words",
+    "footer": "Snake-words, erstellt von Lucie Struplova, 2024"
+  },
+  "menu": {
+    "settings": "Einstellungen",
+    "statistics": "Statistiken",
+    "history": "Verlauf",
+    "rules": "Spielregeln",
+    "login": "Anmelden",
+    "registration": "Registrierung",
+    "logout": "Abmelden",
+    "newGame": "Neues Spiel",
+    "cancel": "Abbrechen"
+  },
+  "settings": {
+    "title": "Einstellungen für Benutzer",
+    "wordLength": "Wortlänge:",
+    "autofill": "Auto-Ausfüllen:",
+    "yes": "Ja",
+    "no": "Nein",
+    "language": "Sprache:",
+    "ok": "Ok",
+    "cancel": "Abbrechen"
+  },
+  "rules": {
+    "title": "Spielregeln Snake-words",
+    "header": "Regeln:",
+    "p1": "Einfaches Erraten von Wörtern. Sie können die Länge der Wörter wählen, die Sie erraten möchten. Die minimale Wortlänge beträgt 4 Buchstaben, die maximale derzeit 11 Buchstaben. Die Anzahl der Versuche, das Wort zu erraten, ist nicht begrenzt.",
+    "p2": "Wörter können im Singular oder Plural jeder Wortart vorkommen. Beim Versuch, ein Wort zu erraten, muss es keinen Sinn ergeben. (z. B. wir erraten das Wort \"FOUKÁ\". Ich gebe HOUSX ein. Nach dem Absenden wird der Versuch ausgewertet und Sie fahren mit dem nächsten Versuch fort, bis Sie es erraten haben oder die Anwendung schließen). Wenn der Buchstabe an der richtigen Stelle im Wort steht, wird er grün hervorgehoben, wenn der Buchstabe im Wort, aber an der falschen Stelle steht, wird er gelb hervorgehoben. Ein Buchstabe, der nicht im Wort vorkommt, wird hellgrau hervorgehoben. Alle Buchstaben können wiederholt verwendet werden, bis das erratene Wort gelöst ist (auch wenn es grau ist). Wenn der Buchstabe mehr als einmal im Wort vorkommt und wir nicht alle seine Positionen richtig erraten, wird er beim nächsten Versuch gelb hervorgehoben. Buchstaben können auch direkt über die Tastatur eingegeben werden.",
+    "p3": "Pro Tag kann eine beliebige Anzahl von Spielen gespielt werden. Die Wörter werden zufällig aus der eingestellten Wortlänge (Menü - Einstellungen) ausgewählt. Das erratene Wort kann jederzeit später beendet werden. Alle gespielten und ungespielten Wörter finden Sie im Menü \"Verlauf\". Klicken Sie nach Auswahl der Wortlänge darauf, um fortzufahren oder zu sehen, wie wir es gelöst haben. Sobald ein Wort einmal gespielt wurde, kann es nie wieder gespielt werden.",
+    "p4_header": "Optionale Eigenschaften einstellen:",
+    "p4_text": "Sie können die Länge der zu erratenden Wörter auf 4-11 Buchstaben einstellen und festlegen, ob die erratenen Buchstaben (Positionen der Buchstaben im erratenen Wort) beim nächsten Versuch automatisch ausgefüllt werden sollen.",
+    "p5_header": "Registrierung:",
+    "p5_text": "Um spielen zu können, müssen Sie sich registrieren. Die Registrierung ist wichtig, damit die Anwendung funktioniert, ohne sie ist es nicht möglich, die Wortlänge einzustellen und zu ändern sowie Statistiken und den Verlauf der gespielten Spiele zu erstellen. Wir sammeln keine Benutzerdaten (nur Benutzername, Passwort, E-Mail) und versenden keine \"Newsletter\". Die E-Mail wird nur zur Wiederherstellung des Kontos verwendet, falls das Passwort vergessen wurde. Oder Sie können sich über ein Google-Konto anmelden.",
+    "p6_header": "Statistiken:",
+    "p6_item1": "1. Global über alle Benutzer",
+    "p6_item2": "2. Allgemeine persönliche Statistiken des Benutzers",
+    "p6_item3": "3. Nach Wortlänge. Liste der Benutzer, die das gewählte Wort gespielt haben.",
+    "back": "Zurück"
+  },
+  "login": {
+    "title": "Anmelden",
+    "userName": "Benutzername:",
+    "password": "Passwort:",
+    "userNamePlaceholder": "Benutzername max. 30",
+    "passwordPlaceholder": "Passwort max. 30",
+    "ok": "Ok",
+    "registration": "Registrierung"
+  },
+  "registration": {
+    "title": "Registrierung",
+    "userName": "Benutzername:",
+    "password": "Passwort:",
+    "confirmPassword": "Passwort bestätigen:",
+    "email": "E-Mail:",
+    "userNamePlaceholder": "Benutzername max. 30",
+    "passwordPlaceholder": "Passwort max. 30",
+    "emailPlaceholder": "E-Mail",
+    "ok": "Ok",
+    "back": "Zurück"
+  },
+  "history": {
+    "title": "Spielverlauf",
+    "loading": "Laden ...",
+    "wordNo": "Wort Nr.",
+    "notFinished": "Nicht beendet",
+    "noWords": "Keine gespielten Wörter ....",
+    "back": "Zurück",
+    "continue": "Fortfahren"
+  },
+  "stats": {
+    "title": "Spielstatistiken",
+    "global": "Global",
+    "user": "Benutzer",
+    "word": "Wort",
+    "totalGames": "Gesamt gespielte Spiele:",
+    "doneGames": "Abgeschlossene/unvollständige Spiele:",
+    "totalUsers": "Gesamt registrierte Spieler:",
+    "chooseLength": "Länge wählen:",
+    "userStats": "Benutzerstatistiken",
+    "globalStats": "Globale Statistiken",
+    "avgGamesPerPlayer": "Durchschnitt der abgeschlossenen Spiele pro Spieler:",
+    "completedByLength": "Abgeschlossene Wortlängen-Spiele:",
+    "length": "Länge:",
+    "number": "Anzahl:",
+    "userTable": "Benutzertabelle - {{userName}}",
+    "completedIncompleted": "Abgeschlossen / Unvollständig:",
+    "userCompletedByLength": "Abgeschlossene/unvollständige Spiele des Benutzers \"{{userName}}\" nach Wortlänge:"
+  },
+  "errors": {
+    "noMoreWords": "Keine weiteren Wörter...",
+    "wordNotFound": "Fehler: Wort nicht gefunden"
+  }
+}

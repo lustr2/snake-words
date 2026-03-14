@@ -1,0 +1,97 @@
+{
+  "app": {
+    "title": "Snake-words",
+    "footer": "Snake-words, stworzone przez Lucie Struplova, 2024"
+  },
+  "menu": {
+    "settings": "Ustawienia",
+    "statistics": "Statystyki",
+    "history": "Historia",
+    "rules": "Zasady gry",
+    "login": "Logowanie",
+    "registration": "Rejestracja",
+    "logout": "Wyloguj",
+    "newGame": "Nowa gra",
+    "cancel": "Anuluj"
+  },
+  "settings": {
+    "title": "Ustawienia użytkownika",
+    "wordLength": "Długość słów:",
+    "autofill": "Autouzupełnianie:",
+    "yes": "Tak",
+    "no": "Nie",
+    "language": "Język:",
+    "ok": "Ok",
+    "cancel": "Anuluj"
+  },
+  "rules": {
+    "title": "Zasady gry Snake-words",
+    "header": "Zasady:",
+    "p1": "Proste zgadywanie słów. Możesz wybrać długość słów, które chcesz zgadywać. Minimalna długość słowa to 4 litery, maksymalna obecnie to 11 liter. Liczba prób odgadnięcia słowa nie jest ograniczona.",
+    "p2": "Słowa mogą być w liczbie pojedynczej lub mnogiej dowolnej części mowy. Podczas próby odgadnięcia słowa nie musi ono mieć sensu (np. zgadujemy słowo „FOUKÁ”. Wpisuję HOUSX. Po zatwierdzeniu próba jest oceniana i przechodzisz do kolejnej próby, aż zgadniesz lub zamkniesz aplikację). Jeśli litera znajduje się we właściwym miejscu w słowie, jest podświetlona na zielono; jeśli litera jest w słowie, ale w niewłaściwym miejscu, jest podświetlona na żółto. Litera, która nie występuje w słowie, jest podświetlona na jasnoszaro. Wszystkie litery mogą być używane wielokrotnie do momentu rozwiązania zagadki (nawet jeśli są szare). Jeśli litera występuje w słowie więcej niż raz i ne zgadniemy poprawnie wszystkich jej pozycji, w kolejnej próbie zostanie podświetlona na żółto. Litery można również wpisywać bezpośrednio z klawiatury.",
+    "p3": "Dziennie można rozegrać dowolną liczbę gier. Słowa są wybierane losowo z ustawionej długości słowa (Menu - Ustawienia). Zgadywane słowo można dokończyć w dowolnym momencie później. Wszystkie rozegrane i nierozegrane słowa można znaleźć w menu „Historia”, a po wybraniu długości słowa kliknąć je, aby kontynuować lub zobaczyć, jak je rozwiązaliśmy. Raz rozegrane słowo nie może być już nigdy zagrane ponownie.",
+    "p4_header": "Ustawienie opcjonalnych właściwości:",
+    "p4_text": "Możesz ustawić długość zgadywanych słów na 4-11 liter oraz zdecydować, czy odgadnięte litery (pozycje liter w zgadywanym słowie) mają być automatycznie uzupełniane w kolejnej próbie.",
+    "p5_header": "Rejestracja:",
+    "p5_text": "Aby móc grać, musisz się zarejestrować. Rejestracja jest ważna dla działania aplikacji; bez niej nie jest możliwe ustawianie i zmienianie długości słów oraz tworzenie statystyk i historii rozegranych gier. Nie zbieramy danych użytkowników (tylko nazwa użytkownika, hasło, e-mail) i nie wysyłame żadnych „newsletterów”. E-mail służy wyłącznie do odzyskiwania konta w przypadku zapomnienia hasła. Możesz również zalogować się przez konto Google.",
+    "p6_header": "Statystyki:",
+    "p6_item1": "1. Globalne dla wszystkich użytkowników",
+    "p6_item2": "2. Ogólne statystyki osobiste użytkownika",
+    "p6_item3": "3. Według długości słowa. Lista użytkowników, którzy grali w wybrane słowo.",
+    "back": "Wróć"
+  },
+  "login": {
+    "title": "Logowanie",
+    "userName": "Nazwa użytkownika:",
+    "password": "Hasło:",
+    "userNamePlaceholder": "Nazwa użytkownika maks. 30",
+    "passwordPlaceholder": "Hasło maks. 30",
+    "ok": "Ok",
+    "registration": "Rejestracja"
+  },
+  "registration": {
+    "title": "Rejestracja",
+    "userName": "Nazwa użytkownika:",
+    "password": "Hasło:",
+    "confirmPassword": "Potwierdź hasło:",
+    "email": "E-mail:",
+    "userNamePlaceholder": "Nazwa użytkownika maks. 30",
+    "passwordPlaceholder": "Hasło maks. 30",
+    "emailPlaceholder": "E-mail",
+    "ok": "Ok",
+    "back": "Wróć"
+  },
+  "history": {
+    "title": "Historia gier",
+    "loading": "Ładowanie ...",
+    "wordNo": "Slowo nr",
+    "notFinished": "Niedokończone",
+    "noWords": "Brak rozegranych słów ....",
+    "back": "Wróć",
+    "continue": "Kontynuuj"
+  },
+  "stats": {
+    "title": "Statystyki gry",
+    "global": "Globalne",
+    "user": "Użytkownik",
+    "word": "Słowo",
+    "totalGames": "Łączna liczba rozegranych gier:",
+    "doneGames": "Gry ukończone/nieukończone:",
+    "totalUsers": "Łączna liczba zarejestrowanych graczy:",
+    "chooseLength": "Wybierz długość:",
+    "userStats": "Statystyki użytkownika",
+    "globalStats": "Statystyki globalne",
+    "avgGamesPerPlayer": "Średnia liczba ukończonych gier na gracza:",
+    "completedByLength": "Ukończone gry według długości słowa:",
+    "length": "Długość:",
+    "number": "Liczba:",
+    "userTable": "Tabela użytkownika - {{userName}}",
+    "completedIncompleted": "Ukończone / Nieukończone:",
+    "userCompletedByLength": "Ukończone/nieukończone gry użytkownika \"{{userName}}\" według długości słowa:"
+    },
+    "errors": {
+    "noMoreWords": "Brak słów...",
+    "wordNotFound": "Błąd: nie znaleziono słowa"
+    }
+    }
+

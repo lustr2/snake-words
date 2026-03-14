@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { UserSettings } from "../context/SettingsContext";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import './style.css';
@@ -9,6 +10,7 @@ interface LoginDataI {
 }
 
 const LoginPage: React.FC<LoginDataI> = ({ onClickLogin, onClickRegistration  }) => {
+    const { t } = useTranslation();
     const [userName, setUserName] = useState<string>('');
     const [password, setPassword] = useState<string>('');
 
@@ -112,31 +114,31 @@ const LoginPage: React.FC<LoginDataI> = ({ onClickLogin, onClickRegistration  })
     return (
         <>
             <div className="login-content">
-              <div className="body-title">Login</div>  
+              <div className="body-title">{t('login.title')}</div>  
                 <form onSubmit={onSubmitLogin}>
                   <div className="form-group">
-                    <label className="label-text">User name:</label>
+                    <label className="label-text">{t('login.userName')}</label>
                     <input 
                         type="text" 
                         name='userName' 
                         onChange={(e) => setUserName(e.target.value)}
                         maxLength={30} 
-                        placeholder="User name max 30" 
+                        placeholder={t('login.userNamePlaceholder')} 
                     /> 
                   </div>
                   <div className="form-group">
-                    <label className="label-text">Password:</label>
+                    <label className="label-text">{t('login.password')}</label>
                     <input 
                         type="password" 
                         name='password'
                         onChange={(e) => setPassword(e.target.value)} 
                         maxLength={30} 
-                        placeholder="Password max 30" 
+                        placeholder={t('login.passwordPlaceholder')} 
                     />
                   </div>
                   <div className="body-title">
-                    <button type='submit' className="button-ok">Ok</button> 
-                    <button type='button' className="button-register" onClick={handleClickRegistration}>Registration</button> 
+                    <button type='submit' className="button-ok">{t('login.ok')}</button> 
+                    <button type='button' className="button-register" onClick={handleClickRegistration}>{t('login.registration')}</button> 
                   </div>
                 </form>
                 {/* Google Přihlášení */}
