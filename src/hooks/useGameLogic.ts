@@ -117,7 +117,19 @@ export const useGameLogic = (login: UserSettings) => {
     setMisplaceLetter(newMisplaceLetter);
     setWrongLetter(newWrongLetter);
 
-    updateHistory(shots, fin, activeWord, sign, history, setHistory, pointerSlova, login, slovaZDB, setSlovaZDB, setErrorText, updateGameOnDb);
+    updateHistory({
+      newHistory: shots,
+      fin,
+      activeWord,
+      sign,
+      history,
+      setHistory,
+      pointerSlova,
+      login,
+      slovaZDB,
+      setSlovaZDB,
+      setErrorText
+    });
 
     if (fin) {
       setFinish(true);
@@ -241,7 +253,15 @@ export const useGameLogic = (login: UserSettings) => {
       const cancelGame: string[] = [...(history.length > 0 ? history[history.length - 1].history : [])];
       if (countFilling === 0) {
         ((cancelGame.length > 0) && (equal(history[history.length - 1].model, tmpActiveWord))) &&
-          updateGameOnDb(finish, cancelGame, login, pointerSlova, slovaZDB, setSlovaZDB, setErrorText);
+          updateGameOnDb({
+            fin: finish,
+            shots: cancelGame,
+            login,
+            pointerSlova,
+            slovaZDB,
+            setSlovaZDB,
+            setErrorText
+          });
       } else {
         setHistory(prevHistory => {
           const updatedHistory = [...prevHistory];
@@ -255,7 +275,15 @@ export const useGameLogic = (login: UserSettings) => {
           }
           return updatedHistory;
         });
-        updateGameOnDb(finish, [...cancelGame], login, pointerSlova, slovaZDB, setSlovaZDB, setErrorText);
+        updateGameOnDb({
+          fin: finish,
+          shots: [...cancelGame],
+          login,
+          pointerSlova,
+          slovaZDB,
+          setSlovaZDB,
+          setErrorText
+        });
       }
       setFinish(true);
       setContinuePlay(false);
