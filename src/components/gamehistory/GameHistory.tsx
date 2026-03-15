@@ -127,7 +127,7 @@ const GameHistory: React.FC<GameHistoryProps> = ({ user, continueWord }) => {
       <>
         <div className="body-title">{t('history.title')}</div>
         <div className='tab-title'> 
-          <Tabs tabNames={tabNames} activeTab={activeTab} onTabChange={handleTabChange} />
+          <Tabs tabNames={tabNames} activeTab={activeTab} onTabChange={handleTabChange} className="tabs-small" />
         </div>
         <div className='tab-view'>
           {(activeWord === -1) 

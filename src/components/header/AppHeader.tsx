@@ -43,7 +43,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({
             <div className="menu-bar">
                 <div className="menu-button">&#9776;
                     <div className="dropdown-content">
-                        {((login.id !== 0) && ((activeWord.length === 0) || (finish))) &&
+                        {(login.id !== 0) &&
                             <>
                                 <a href="#" onClick={(e) => { e.preventDefault(); onSettingsClick(); }}>{t('menu.settings')}</a>
                                 <a href="#" onClick={(e) => { e.preventDefault(); onStatisticsClick(); }}>{t('menu.statistics')}</a>

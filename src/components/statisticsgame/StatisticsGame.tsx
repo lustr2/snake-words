@@ -48,7 +48,7 @@ const StatisticsGame: React.FC<StatisticsGameProps> = () => {
         <>
             <div className="body-title">{t('stats.title')}</div>
             <div className='tab-title'> 
-                <Tabs tabNames={tabNames} activeTab={activeTab} onTabChange={handleTabChange} />
+                <Tabs tabNames={tabNames} activeTab={activeTab} onTabChange={handleTabChange} className="tabs-large" />
             </div>
             <div className='tab-view'>
                 {(activeTab === 0) && (isLoaded) &&

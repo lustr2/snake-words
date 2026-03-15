@@ -60,6 +60,8 @@ function App() {
   const logoutButton = () => {
     setLoginNow(false);
     setRegistrationNew(false);
+    setViewHistory(false);
+    setStatisticsGame(false);
     game.setLetterCount(0);
     setLogin({ id: 0, userName: '', actLengthWords: 0, autoFill: false });
     
@@ -123,6 +125,7 @@ function App() {
   const handleHistoryClick = () => {
     setShowSettings(false);
     setRulesGame(false);
+    setStatisticsGame(false);
     setViewHistory(true);
     game.resetGameState('');
     game.setContinueAW(-1);
