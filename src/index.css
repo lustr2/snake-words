@@ -84,7 +84,7 @@ body {
   top: 100%;
   background-color: white;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 100; /* Zvýšeno z 1, aby menu bylo nad taby (které mají z-index 2) */
   text-align: left;
   font-size: 0.8em;
 }
