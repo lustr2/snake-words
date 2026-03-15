@@ -746,21 +746,21 @@ function App() {
             <StatisticsGame />
           }
           {errorText}
-        </div>
-        <div className="footer">
-          <span>{t('app.footer')}</span>
-          <div className="footer-lang-container">
-            {languages.map((lang, index) => (
-              <span key={lang.code}>
-                <span
-                  className={`footer-lang ${currentLang === lang.code ? 'active' : ''}`}
-                  onClick={() => i18n.changeLanguage(lang.code)}
-                >
-                  {lang.label}
+          <div className="footer">
+            <span>{t('app.footer')}</span>
+            <div className="footer-lang-container">
+              {languages.map((lang, index) => (
+                <span key={lang.code}>
+                  <span
+                    className={`footer-lang ${currentLang === lang.code ? 'active' : ''}`}
+                    onClick={() => i18n.changeLanguage(lang.code)}
+                  >
+                    {lang.label}
+                  </span>
+                  {index < languages.length - 1 && <span className="lang-separator">|</span>}
                 </span>
-                {index < languages.length - 1 && <span className="lang-separator">|</span>}
-              </span>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </UserContext.Provider>    

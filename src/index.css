@@ -41,6 +41,8 @@ body {
   min-height: 400px;
   box-sizing: border-box;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -184,22 +186,22 @@ body {
 }
 
 .footer {
-  margin-top: 5px;
+  margin-top: auto;
   font-size: 0.7em;
   color: #555;
-  text-align: left;
-  margin: 0 10px;
-  border: 1px solid black;
+  border-top: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
   gap: 20px;
   align-items: center;
-  padding: 2px 5px;
+  padding: 5px 10px;
+  background-color: #f9f9f9;
 }
 
 .footer-lang-container {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .footer-lang {
@@ -219,8 +221,9 @@ body {
 }
 
 .lang-separator {
-  color: #555;
-  margin: 0 2px;
+  color: #888;
+  margin: 0 4px;
+  font-weight: normal;
 }
 
 .body-title {
