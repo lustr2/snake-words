@@ -87,7 +87,15 @@
     "number": "Number:",
     "userTable": "Users table - {{userName}}",
     "completedIncompleted": "Completed / Incompleted:",
-    "userCompletedByLength": "Completed/Incompleted games of user \"{{userName}}\" by word length:"
+    "userCompletedByLength": "Completed/Incompleted games of user \"{{userName}}\" by word length:",
+    "back": "Back",
+    "orderWord": "Order for word No",
+    "order": "Order",
+    "userName": "User name",
+    "attempts": "Attempts",
+    "notDone": "Not finished",
+    "notDoneUsers": "Number of players who did not finish the word",
+    "noData": "No data"
   },
   "errors": {
     "noMoreWords": "No more words...",

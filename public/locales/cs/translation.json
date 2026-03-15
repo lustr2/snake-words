@@ -87,7 +87,15 @@
     "number": "Počet:",
     "userTable": "Tabulka uživatele - {{userName}}",
     "completedIncompleted": "Dokončené / Nedokončené:",
-    "userCompletedByLength": "Dokončené/Nedokončené hry uživatele \"{{userName}}\" podle délky slov:"
+    "userCompletedByLength": "Dokončené/Nedokončené hry uživatele \"{{userName}}\" podle délky slov:",
+    "back": "Zpět",
+    "orderWord": "Pořadí pro slovo č.",
+    "order": "Pořadí",
+    "userName": "Uživatelské jméno",
+    "attempts": "Počet pokusů",
+    "notDone": "Nedokončeno",
+    "notDoneUsers": "Počet hráčů, kteří slovo nedokončili",
+    "noData": "Žádná data"
   },
   "errors": {
     "noMoreWords": "Nejsou další slova...",

@@ -32,7 +32,9 @@ const RulesGame: React.FC<RulesGameProps> = ({ onClickBack }) => {
                     {t('rules.p6_item3')}<br />
                 </p>
             </div>
-            <button className='login' onClick={handleClickBack}>{t('rules.back')}</button>
+            <div style={{ display: 'flex', justifyContent: 'center', padding: '10px' }}>
+                <button className='login' onClick={handleClickBack}>{t('rules.back')}</button>
+            </div>
         </>
     )
 }

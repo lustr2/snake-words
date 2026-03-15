@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface WordStatsData {
     idUser: number, 
@@ -26,6 +27,7 @@ interface WordStatsProps {
   }
 
 const WordStats: React.FC<WordStatsProps> = ({ lengthWord, back }) => {
+    const { t } = useTranslation();
     const [oneWordStats, setOneWordStats] = useState <WordStatsData[]>([]);
     const [pointerList, setPointerList] = useState<number>(0);
     const countList: number = 10;
@@ -127,21 +129,21 @@ const WordStats: React.FC<WordStatsProps> = ({ lengthWord, back }) => {
               <>
                 <div className="table-container">
                     <table className="styled-table">
-                        <caption> Order for word No: {activeWordStats}</caption>
+                        <caption> {t('stats.orderWord')}: {activeWordStats}</caption>
                         <tbody>
                             {oneWordStats.slice(pointerList, pointerList + countList).map((o, index) => (o.done === true)&&
                             <> 
                             <tr key={o.idUser}>
-                                <td title="Order">{pointerList + index + 1}. </td>
-                                <td title="User name">{o.userName} </td>
-                                <td title="Number of attempts">{o.countAttempt}</td>
+                                <td title={t('stats.order')}>{pointerList + index + 1}. </td>
+                                <td title={t('stats.userName')}>{o.userName} </td>
+                                <td title={t('stats.attempts')}>{o.countAttempt}</td>
                             </tr>
                             </>
                             )}
                             {(oneWordStats.filter(item => item.done === false).length > 0) && (oneWordStats.length <= (pointerList + 1)*countList)&&
                                 <tr>
-                                    <td title="Not completed">N</td>
-                                    <td title="Number of players who did not finish the word"> {oneWordStats.filter(item => item.done === false).length}</td>
+                                    <td title={t('stats.notDone')}>N</td>
+                                    <td title={t('stats.notDoneUsers')}> {oneWordStats.filter(item => item.done === false).length}</td>
                                     <td></td>
                                 </tr>
                             }
@@ -153,15 +155,15 @@ const WordStats: React.FC<WordStatsProps> = ({ lengthWord, back }) => {
                     <button className={`login ${oneWordStats.length <= pointerList + countList ? 'disabled' : ''}`} onClick={handleNext} disabled={oneWordStats.length <= pointerList + countList}>→</button>
                 </div>
                 <div>
-                    <button className='login' onClick={handleClickBack}>Back</button>
+                    <button className='login' onClick={handleClickBack}>{t('history.back')}</button>
                 </div>
               </>
               : <>
                 {
-                  ((lengthStats.length === 0 ) && (activeWordStats === 0))&& <div>No data :-(</div>
+                  ((lengthStats.length === 0 ) && (activeWordStats === 0))&& <div>{t('stats.noData')} :-(</div>
                 }
                 <div>
-                    <button className='login' onClick={handleClickBack}>Back</button>
+                    <button className='login' onClick={handleClickBack}>{t('history.back')}</button>
                 </div>
                 </>
             }
